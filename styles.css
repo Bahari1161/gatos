@@ -80,3 +80,23 @@ h1{
   animation: serpentining 5s linear infinite;
 }
 
+#imageCarousel {
+  width: 200px;
+  background-color: red;
+  margin: auto;
+  overflow: hidden;
+}
+
+.carousel-container {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+  width: 100%;
+  
+}
+
+button {
+  cursor: pointer;
+}

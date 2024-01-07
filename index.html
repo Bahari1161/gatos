@@ -1,37 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Home</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <!--
+
+<head>
+  <title>Home</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" />
+  <!--
       Need a visual blank slate?
       Remove all code in `styles.css`!
     -->
-    <link rel="stylesheet" href="styles.css" />
-    <script type="text/javascript">
-      document.addEventListener('DOMContentLoaded', function() {
-        const miauContainer = document.getElementById('miau');
-        let miauText = '';
-  
-        for (let i = 0; i < 700; i++) {
-          miauText += 'miau ';
-        }
-  
-        miauContainer.innerText = miauText;
-      });
-    </script>
-  </head>
-  <body>
-    <div id='miau'></div>
-    <h1 id="patatitulo">Gatos arabes OwO</h1>
-    <div id="videopatatas">
-      <video width="373" height="400" loop >
-        <source src="videogatos.mp4" type="video/mp4" />
-      </video>
+  <link rel="stylesheet" href="styles.css" />
+
+  <script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function () {
+      const miauContainer = document.getElementById('miau');
+      let miauText = '';
+
+      for (let i = 0; i < 2000; i++) {
+        miauText += 'miau ';
+      }
+
+      miauContainer.innerText = miauText;
+    });
+
+
+
+  </script>
+</head>
+
+<body>
+  <div id='miau'></div>
+  <h1 id="patatitulo">Gatos arabes OwO</h1>
+  <div id="videopatatas">
+    <video width="373" height="400" loop>
+      <source src="videogatos.mp4" type="video/mp4" />
+    </video>
+  </div>
+  <!-- Contenido del carrusel -->
+  <div id="imageCarousel">
+    <div class="carousel-container">
+      <div class="carousel-item"><img src="gato1.png" alt="Imagen 1"></div>
+      <div class="carousel-item"><img src="gato2.png" alt="Imagen 2"></div>
+      <div class="carousel-item"><img src="gato3.png" alt="Imagen 3"></div>
+      <!-- Agrega más elementos .carousel-item según sea necesario -->
     </div>
+  </div>
+
+  <!-- Botones de navegación -->
+  <button onclick="prevSlide()">Anterior</button>
+  <button onclick="nextSlide()">Siguiente</button>
 
 
-  </body>
+
+  <script>
+let currentIndex = 0;
+  const carouselContainer = document.getElementsByClassName('carousel-container')[0];
+  const totalSlides = document.getElementsByClassName('carousel-item').length;
+
+  console.log("hey2", totalSlides);
   
+  function showSlide(index) {
+    if (index < 0) {
+      currentIndex = totalSlides - 1;
+    } else if (index >= totalSlides) {
+      currentIndex = 0;
+    } else {
+      currentIndex = index;
+    }
+
+    const translateValue = -currentIndex * 100 + '%';
+    carouselContainer.style.transform = 'translateX(' + translateValue + ')';
+  }
+
+  function prevSlide() {
+
+    if(currentIndex === 0) return;
+
+    showSlide(currentIndex - 1);
+  }
+
+  function nextSlide() {
+    showSlide(currentIndex + 1);
+  }
+  </script>
+</body>
+
 </html>
