@@ -5,8 +5,8 @@
 body {
   margin: 0;
   font-family: system-ui, sans-serif;
-  color: black;
-  background-color: white;
+  color: white;
+  background-color: rgb(30, 29, 29);
 }
 
 #patata {
@@ -20,17 +20,63 @@ body {
   background-color: rgb(255, 19, 19);
 }
 
-#superpatata {
-  height: 100vh;
+h1{
+  text-align: center;
+}
+
+#volador{
+  position:absolute; 
+  top:20px;
+  left: 0px;
+  background:red; 
+  width:100%; 
+  height:200px
+}
+
+#videopatatas{
+  margin: auto ;
+  border-radius: 22px;
+  padding: 25px;
+  width: fit-content;
+  background-color: rgb(56, 42, 83);
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgb(243, 141, 9);
 
 
 }
 
-#mono {
-  padding: 20px;
-  background-color: aquamarine;
+#miau {
+  font-style: italic;
+  position: fixed;
+  z-index: -1;
+  color: #ffffff38; /* Color del texto */
+  animation: serpentining 1s infinite;
 }
+
+
+@keyframes serpentining {
+  0% {
+    font-style: italic;
+  }
+  25% {
+    font-style: normal;
+  }
+  50% {
+    font-style: italic;
+
+  }
+  75% {
+    font-style: normal;
+  }
+  100% {
+    font-style: italic;
+  }
+}
+
+.serpentining-letters {
+  display: inline-block;
+  font-size: 2em;
+  animation: serpentining 5s linear infinite;
+}
+

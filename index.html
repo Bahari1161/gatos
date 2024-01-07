@@ -9,11 +9,29 @@
       Remove all code in `styles.css`!
     -->
     <link rel="stylesheet" href="styles.css" />
-    <script type="module" src="script.js"></script>
+    <script type="text/javascript">
+      document.addEventListener('DOMContentLoaded', function() {
+        const miauContainer = document.getElementById('miau');
+        let miauText = '';
+  
+        for (let i = 0; i < 700; i++) {
+          miauText += 'miau ';
+        }
+  
+        miauContainer.innerText = miauText;
+      });
+    </script>
   </head>
   <body>
-    <video width="320" height="240" controls>
-      <source src="videogatos.mp4" type="video/mp4" />
-    </video>
+    <div id='miau'></div>
+    <h1 id="patatitulo">Gatos arabes OwO</h1>
+    <div id="videopatatas">
+      <video width="373" height="400" loop >
+        <source src="videogatos.mp4" type="video/mp4" />
+      </video>
+    </div>
+
+
   </body>
+  
 </html>
