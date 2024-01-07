@@ -1,0 +1,36 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  color: black;
+  background-color: white;
+}
+
+#patata {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 20px;
+  width: fit-content;
+  background-color: rgb(255, 19, 19);
+}
+
+#superpatata {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(243, 141, 9);
+
+
+}
+
+#mono {
+  padding: 20px;
+  background-color: aquamarine;
+}
